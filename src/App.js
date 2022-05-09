@@ -1,8 +1,18 @@
-//mport { Route } from 'react-router-dom';
+import React from "react";
+import Header from "./components/Header/Header";
+
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div>Mustafa</div>
+    <Routes>
+      <Route
+        path="/"
+        element={
+            <Header />
+        }
+      />
+    </Routes>
   );
 }
 
