@@ -2,7 +2,10 @@ import { useEffect, useState } from 'react';
 
 import Logo from '../../assets/logo/Logo.svg';
 import Search from '../../assets/icons/Search.svg';
+import Button from '../UI/Button/Button';
+import Basket from './Basket/Basket';
 
+import { useBasket } from '../../contexts/BasketContext';
 import { useFilters } from '../../contexts/FiltersContext';
 
 import { useQuery } from '../../helpers/useQuery';
@@ -11,6 +14,7 @@ import './Header.scss';
 const Header = () => {
     const [searchText, setSearchText] = useState('');
 
+    const { basketItems } = useBasket();
     const { setFilters } = useFilters();
   
     let query = useQuery();
@@ -68,9 +72,14 @@ const Header = () => {
             onChange={(e) => setSearchText(e.target.value)}
           />
         </div>
-        <div className='cart-container' data-testid='basket'>
-         Sepet
+        <div className='basket-container' data-testid='basket'>
+        <Button text='Sepetim' />
+        <span className='quantity'>{basketItems? basketItems.length : 0}</span>
+        <div className='white-line'></div>
+        <div className='basket' data-testid='basket'>
+          <Basket />
         </div>
+      </div>
       </header>
     );
   };

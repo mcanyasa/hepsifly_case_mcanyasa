@@ -1,0 +1,59 @@
+.modal {
+  z-index: 200;
+  border-radius: 8px;
+  background-color: #fff;
+  animation: fadein 0.5s;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 400px;
+  max-height: 260px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    padding: 23px 18px;
+    border-bottom: 1px solid #cdcdcd;
+    font-weight: 700;
+    line-height: 14px;
+  }
+
+  .body {
+    padding: 16px 38px 20px 20px;
+    font-size: 12px;
+    line-height: 16.8px;
+    flex: 1;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 20px 25px 0px;
+    .footer-btns {
+      display: flex;
+      gap: 10px;
+    }
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+      height: 0px;
+    }
+    to {
+      opacity: 1;
+      height: 260px;
+    }
+  }
+  @media (max-width: 512px) {
+    overflow-y: auto;
+    .footer {
+      .footer-btns {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
