@@ -11,7 +11,7 @@ export const BasketContextProvider = ({ children }) => {
 
   useEffect(() => {
     const storedBasketItems = JSON.parse(localStorage.getItem('basketItems'));
-    storedBasketItems ? setBasketItems(storedBasketItems) : [];
+    return (storedBasketItems ? setBasketItems(storedBasketItems) : [])
   }, []);
 
   useEffect(() => {
