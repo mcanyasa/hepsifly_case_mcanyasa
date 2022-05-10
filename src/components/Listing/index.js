@@ -6,7 +6,7 @@ import Products from './Products/Products';
 
 import './Listing.scss';
 
-const index = () => {
+const Index = () => {
   const scrollToProductsRef = useRef();
   return (
     <div ref={scrollToProductsRef} className='listing-container'>
@@ -19,4 +19,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
