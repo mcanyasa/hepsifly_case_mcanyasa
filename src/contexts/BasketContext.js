@@ -51,4 +51,4 @@ export const BasketContextProvider = ({ children }) => {
   return <BasketContext.Provider value={values}>{children}</BasketContext.Provider>;
 };
 
-export const useBasket = () => useContext(BasketContext);
+export const useBasket = () => { return useContext(BasketContext)} ;
