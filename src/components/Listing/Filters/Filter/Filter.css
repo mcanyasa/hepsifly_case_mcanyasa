@@ -1,0 +1,37 @@
+.filter {
+  margin-bottom: 24px;
+}
+
+.filter h3 {
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  font-size: 16px;
+  line-height: 24px;
+  font-size: 500;
+}
+
+.filter ul li {
+  margin-bottom: 6px;
+  font-size: 15px;
+  line-height: 15px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.filter ul li:hover {
+  cursor: pointer;
+  color: var(--hb-orange);
+}
+
+.filter ul li.selected {
+  color: var(--hb-orange);
+  font-weight: 700;
+}
+
+@media (max-width: 512px) {
+  .filter ul li {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=Filter.css.map */

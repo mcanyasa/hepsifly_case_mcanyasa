@@ -15,7 +15,7 @@ export const FiltersContextProvider = ({ children }) => {
     search: '',
   });
 
-  const history = useNavigate();
+  const navigate = useNavigate();
   let query = useQuery();
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export const FiltersContextProvider = ({ children }) => {
         queryString += `&${key}=${filters[key]}`;
       }
     }
-    history(queryString);
+    navigate(queryString);
   }, [filters]);
 
   const values = {

@@ -1,0 +1,121 @@
+@import '~react-image-gallery/styles/scss/image-gallery.scss';
+
+.single-product {
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 18px;
+  position: relative;
+  height: 411px;
+
+  &:hover {
+    border: 1px solid var(--gray-secondary);
+
+    .image-container {
+      border: none;
+      overflow: hidden;
+      img {
+        transform: scale(1.05);
+      }
+    }
+    .product-body {
+      display: none;
+    }
+
+    .product-basket-btn {
+      display: block;
+    }
+  }
+
+  .image-container {
+    border: 1px solid var(--gray-secondary);
+    padding: 3px 15px;
+    border-radius: 8px;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+      display: block;
+      height: 276px;
+      transition: transform 0.3s ease-in;
+    }
+  }
+
+  .product-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    margin: 9px 0px 10px 0px;
+    height: 32px;
+    padding: 0px 18px;
+  }
+
+  .product-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 18px;
+    .color,
+    .brand {
+      span {
+        font-weight: 700;
+      }
+    }
+
+    .new-price {
+      margin-top: 6px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .old-price {
+      display: flex;
+      align-items: center;
+      span:first-child {
+        color: #9b9b9b;
+        text-decoration: line-through;
+        margin-right: 5px;
+        font-size: 13px;
+        opacity: 0.7;
+      }
+      span:last-child {
+        color: #f90000;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .product-basket-btn {
+    display: none;
+    padding: 12px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    animation: animatebtn 1s;
+  }
+}
+
+@media (max-width: 512px) {
+  .single-product {
+    height: auto;
+    .product-basket-btn {
+      position: relative;
+    }
+    &:hover {
+      .product-body,
+      .product-basket-btn {
+        display: block;
+      }
+    }
+  }
+}
+
+@keyframes animatebtn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

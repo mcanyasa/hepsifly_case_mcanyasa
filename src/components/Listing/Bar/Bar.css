@@ -1,0 +1,117 @@
+.bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 512px) {
+  .bar {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .bar .title {
+    margin-bottom: 10px;
+  }
+}
+
+.bar .searched-item-container .title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 28px;
+}
+
+.bar .searched-item-container .searched-word {
+  color: var(--light-gray);
+  font-size: 15px;
+}
+
+.bar .searched-item-container .searched-word span {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.bar .sorting {
+  position: relative;
+}
+
+.bar .sorting:hover .sorting-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bar .sorting .sorting-options {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: White;
+  background-color: black;
+  display: none;
+  position: absolute;
+  width: 180px;
+  z-index: 100;
+  -webkit-animation: animateSorting 0.4s;
+          animation: animateSorting 0.4s;
+}
+
+.bar .sorting .sorting-options div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 9px;
+}
+
+.bar .sorting .sorting-options div img {
+  opacity: 0;
+}
+
+.bar .sorting .sorting-options div img.selected {
+  opacity: 1;
+}
+
+.bar .sorting .sorting-options div span {
+  margin-bottom: 4px;
+  margin-left: 4px;
+  font-size: 14px;
+}
+
+.bar .sorting .sorting-options div:hover {
+  cursor: pointer;
+  background-color: #4169e1;
+}
+
+@-webkit-keyframes animateSorting {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animateSorting {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=Bar.css.map */

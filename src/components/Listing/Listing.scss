@@ -1,0 +1,18 @@
+.listing-container {
+  padding: 17px 78px 0px 81px;
+
+  .body {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 15px 0px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 6px;
+  }
+  @media (max-width: 512px) {
+    padding: 20px;
+    .body {
+      grid-template-columns: 1fr;
+    }
+  }
+}

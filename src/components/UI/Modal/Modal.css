@@ -1,0 +1,89 @@
+.modal {
+  z-index: 200;
+  border-radius: 8px;
+  background-color: #fff;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 400px;
+  max-height: 260px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal .title {
+  padding: 23px 18px;
+  border-bottom: 1px solid #cdcdcd;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+.modal .body {
+  padding: 16px 38px 20px 20px;
+  font-size: 12px;
+  line-height: 16.8px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.modal .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0px 20px 25px 0px;
+}
+
+.modal .footer .footer-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+    height: 0px;
+  }
+  to {
+    opacity: 1;
+    height: 260px;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    height: 0px;
+  }
+  to {
+    opacity: 1;
+    height: 260px;
+  }
+}
+
+@media (max-width: 512px) {
+  .modal {
+    overflow-y: auto;
+  }
+  .modal .footer .footer-btns {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+/*# sourceMappingURL=Modal.css.map */
