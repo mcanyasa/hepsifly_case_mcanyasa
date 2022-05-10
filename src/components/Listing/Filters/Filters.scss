@@ -1,0 +1,14 @@
+.filters {
+  .sticky {
+    display: flex;
+    flex-direction: column;
+    padding: 19px 0px;
+    position: sticky;
+    top: 0px;
+
+    @media (max-width: 512px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

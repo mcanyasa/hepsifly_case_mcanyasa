@@ -1,0 +1,25 @@
+.listing-container {
+  padding: 17px 78px 0px 81px;
+}
+
+.listing-container .body {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 15px 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr;
+      grid-template-columns: 1fr 5fr;
+  gap: 6px;
+}
+
+@media (max-width: 512px) {
+  .listing-container {
+    padding: 20px;
+  }
+  .listing-container .body {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+/*# sourceMappingURL=Listing.css.map */

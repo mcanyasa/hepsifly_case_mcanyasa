@@ -1,0 +1,46 @@
+.pagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 32px;
+
+  .pageLink,
+  .arrow {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    padding: 9px 16px;
+    border-radius: 9px;
+    font-size: 10px;
+    line-height: 20px;
+    color: #646464;
+    display: flex;
+    align-items: center;
+    margin-right: 4px;
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+    &:hover {
+      border: 1px solid var(--hb-orange);
+    }
+  }
+
+  .arrow:first-child {
+    margin-right: 12.2px;
+  }
+  .arrow:last-child {
+    margin-left: 12.2px;
+  }
+  .paginationList {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .active {
+      .pageLink {
+        background: var(--hb-orange);
+        border: 1px solid transparent;
+        color: white;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.filter {
+  margin-bottom: 24px;
+  h3 {
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 24px;
+    font-size: 500;
+  }
+  ul {
+    li {
+      margin-bottom: 6px;
+      font-size: 15px;
+      line-height: 15px;
+      width: max-content;
+      &:hover {
+        cursor: pointer;
+        color: var(--hb-orange);
+      }
+
+      &.selected {
+        color: var(--hb-orange);
+        font-weight: 700;
+      }
+    }
+  }
+
+  @media (max-width: 512px) {
+    ul {
+      li {
+        font-size: 12px;
+      }
+    }
+  }
+}
